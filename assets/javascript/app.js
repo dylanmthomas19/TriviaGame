@@ -1,5 +1,3 @@
-var backgroundImages = ["assets/images/dragon1.jpg", "assets/images/dragon2.jpg", "assets/images/dragon3.jpg", "assets/images/dragon4.jpg", "assets/images/dragon5.jpg"]
-
 $(document).ready(function () {
 
     var wins = 0;
@@ -63,6 +61,7 @@ $(document).ready(function () {
 
     $(".questionP").on("click", function(){
         question1()
+        $('body').css('background-image','url(assets/images/dragon1.jpg)')
     })
     
     function question1(){
@@ -119,6 +118,7 @@ $(document).ready(function () {
 
     function question2() {
         $(".answers").text("")
+        $('body').css('background-image','url(assets/images/dragon2.jpg)')
         $(".questionP").text(questions[1])
         $(".qCounter").html("You have " + "<span id=timer>" + " seconds to answer")
 
@@ -166,6 +166,7 @@ $(document).ready(function () {
     }
     function question3() {
         $(".answers").text("")
+        $('body').css('background-image','url(assets/images/dragon3.jpg)')
         $(".questionP").text(questions[2])
         $(".qCounter").html("You have " + "<span id=timer>" + " seconds to answer")
 
@@ -213,6 +214,7 @@ $(document).ready(function () {
     }
     function question4() {
         $(".answers").text("")
+        $('body').css('background-image','url(assets/images/dragon4.jpg)')
         $(".questionP").text(questions[3])
         $(".qCounter").html("You have " + "<span id=timer>" + " seconds to answer")
 
@@ -260,6 +262,7 @@ $(document).ready(function () {
     }
     function question5() {
         $(".answers").text("")
+        $('body').css('background-image','url(assets/images/dragon5.jpg)')
         $(".questionP").text(questions[4])
         $(".qCounter").html("You have " + "<span id=timer>" + " seconds to answer")
 
@@ -307,8 +310,10 @@ $(document).ready(function () {
     }
 
     function finalCount() {
+        $(".answers").text("")
         if (wins > loss) {
             $(".qCounter").text("Great job! Your knowledge of Dragons is impressive!")
+            $('body').css('background-image','url(assets/images/dragonFinal.jpg)')
         } else {
             $(".qCounter").text("You need to brush up on your Dragonomics!")
             setTimeout(question1, 1500);
