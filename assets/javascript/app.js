@@ -61,7 +61,6 @@ $(document).ready(function () {
 
     $(".questionP").on("click", function(){
         question1()
-        $('body').css('background-image','url(assets/images/dragon1.jpg)')
     })
     
     function question1(){
@@ -69,6 +68,7 @@ $(document).ready(function () {
         $("#wins").text("WINS:" + wins)
         loss = 0;
         $("#loss").text("LOSS:" + loss)
+        $('body').css('background-image','url(assets/images/dragon1.jpg)')
         $(".answers").text("")
         $(".questionP").text(questions[0])
         $(".qCounter").html("You have " + "<span id=timer>" + " seconds to answer")
